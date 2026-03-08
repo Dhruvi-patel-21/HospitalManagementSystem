@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/web/viewDoctor.jsp</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/web/css/style.css</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/web/index.jsp</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/web/addPatient.jsp</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/src/java/dao/DBConnection.java</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/web/viewAppointment.jsp</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/src/java/model/Appointment.java</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/src/java/dao/AppointmentDAO.java</file>
+            <file>file:/C:/Users/dhruv/Documents/NetBeansProjects/HospitalMangementSystem/src/java/dao/DoctorDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
