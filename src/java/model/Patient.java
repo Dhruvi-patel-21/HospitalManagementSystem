@@ -8,15 +8,10 @@ public class Patient {
     private int age;
     private String disease;
 
-    // =========================
-    // NO-ARG CONSTRUCTOR
-    // =========================
     public Patient() {
     }
 
-    // =========================
-    // PARAMETERIZED CONSTRUCTOR
-    // =========================
+  
     public Patient(int id, String name, String gender, int age, String disease) {
         this.id = id;
         this.name = name;
@@ -25,9 +20,7 @@ public class Patient {
         this.disease = disease;
     }
 
-    // =========================
-    // GETTERS & SETTERS
-    // =========================
+ 
     public int getId() {
         return id;
     }
