@@ -12,7 +12,7 @@ public class AppointmentDAO {
         this.con = con;
     }
 
-    // ✅ ADD APPOINTMENT (FIXED)
+  
     public void addAppointment(Appointment a) {
         try {
             PreparedStatement ps = con.prepareStatement(
@@ -22,7 +22,7 @@ public class AppointmentDAO {
             ps.setInt(1, a.getPatientId());
             ps.setInt(2, a.getDoctorId());
 
-            // ✅ FIX: convert String to java.sql.Date
+            
             java.sql.Date sqlDate = java.sql.Date.valueOf(a.getDate());
             ps.setDate(3, sqlDate);
 
@@ -33,7 +33,7 @@ public class AppointmentDAO {
         }
     }
 
-    // ✅ VIEW APPOINTMENTS WITH PATIENT & DOCTOR NAME
+    
     public List<Appointment> getAllAppointments() {
 
         List<Appointment> list = new ArrayList<>();
@@ -74,58 +74,4 @@ public class AppointmentDAO {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*package dao;
-
-import java.sql.*;
-import java.util.*;
-import model.Appointment;
-
-public class AppointmentDAO {
-    Connection con;
-    public AppointmentDAO(Connection con) { this.con = con; }
-
-    public void addAppointment(Appointment a) {
-        try {
-            PreparedStatement ps = con.prepareStatement(
-                "INSERT INTO appointments(patient_id,doctor_id,date) VALUES(?,?,?)");
-            ps.setInt(1, a.getPatientId());
-            ps.setInt(2, a.getDoctorId());
-            ps.setString(3, a.getDate());
-            ps.executeUpdate();
-        } catch (Exception e) {}
-    }
-
-    public List<Appointment> getAllAppointments() {
-        List<Appointment> list = new ArrayList<>();
-        try {
-            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM appointments");
-            while (rs.next()) {
-                Appointment a = new Appointment();
-                a.setId(rs.getInt("id"));
-                a.setPatientId(rs.getInt("patient_id"));
-                a.setDoctorId(rs.getInt("doctor_id"));
-                a.setDate(rs.getString("date"));
-                list.add(a);
-            }
-        } catch (Exception e) {}
-        return list;
-    }
-}*/
 
