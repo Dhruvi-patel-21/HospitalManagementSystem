@@ -12,9 +12,7 @@ public class PatientDAO {
         this.con = con;
     }
 
-    // =========================
-    // ADD PATIENT
-    // =========================
+   
     public void addPatient(Patient p) {
         try {
             PreparedStatement ps = con.prepareStatement(
@@ -33,9 +31,6 @@ public class PatientDAO {
         }
     }
 
-    // =========================
-    // GET ALL PATIENTS
-    // =========================
     public List<Patient> getAllPatients() {
 
         List<Patient> list = new ArrayList<>();
