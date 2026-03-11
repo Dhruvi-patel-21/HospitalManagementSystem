@@ -1,9 +1,3 @@
-<%-- 
-    Document   : success
-    Created on : 27 Jan 2026, 5:40:16 pm
-    Author     : dhruv
---%>
-
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Success</title>
 
-    <!-- ✅ CSS LINK -->
+  
     <link rel="stylesheet" href="<%= request.getContextPath() %>/css/style.css">
 </head>
 <body>
@@ -28,7 +22,7 @@
     }
 %>
 
-<!-- ✅ SUCCESS BOX -->
+
 <div class="success-box">
 
     <h1>SUCCESS ✅</h1>
@@ -43,30 +37,3 @@
 </html>
 
 
-
-
-<%--<%@ page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Success</title>
-    </head>
-    <body>
-        <%
-            if (session == null || session.getAttribute("username") == null) {
-                response.sendRedirect("index.jsp");
-                return;
-            }
-
-            String msg = request.getParameter("msg");
-            if (msg == null) {
-                msg = "Operation completed successfully";
-            }
-
-            out.println("SUCCESS<br>");
-            out.println(msg + "<br>");
-            out.println("<a href='dashboard.jsp'>Back to Dashboard</a>");
-        %>
-    </body>
-</html>--%>
