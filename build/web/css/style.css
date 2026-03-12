@@ -1,6 +1,3 @@
-/* ===============================
-   GLOBAL RESET
-================================ */
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +5,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===============================
-   BODY
-================================ */
+
 body {
     background-color: #f4f6f8;
     color: #333;
     min-height: 100vh;
 }
 
-/* ===============================
-   NAVBAR
-================================ */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,63 +39,226 @@ body {
     background-color: #c0392b;
 }
 
-/* ===============================
-   WELCOME TEXT
-================================ */
+
 .welcome {
     margin: 20px 30px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     font-size: 18px;
     font-weight: bold;
+    color: #2c3e50;
+    border-left: 5px solid #3498db;
 }
 
-/* ===============================
-   DASHBOARD
-================================ */
-/*.dashboard ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 20px 30px;
-    list-style: none;
-    padding-left: 0;
-}*/
+
+.dashboard {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
 .dashboard ul {
-    display: flex;
-    flex-direction: column;   
-    align-items: center;      
-    gap: 20px;
-    margin: 30px auto;
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 
 .dashboard li {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
 }
 
+
 .card {
-    display: block;
-    width: 260px;
-    padding: 20px;
+    display: inline-block;
+    width: 280px;             
+    padding: 25px 15px;
     text-align: center;
-    background-color: #3498db;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s, background 0.3s;
+    transition: transform 0.2s;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    background-color: #2980b9;
+    opacity: 0.9;
 }
 
-/* ===============================
-   FORM BOX (LOGIN, ADD, VIEW)
-================================ */
+
+
+.dashboard li:nth-child(1)::before {
+    content: "👥 PATIENTS";
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #3498db;
+}
+
+.dashboard li:nth-child(3)::before {
+    content: "👨‍⚕️ DOCTORS";
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #e67e22;
+}
+
+.dashboard li:nth-child(5)::before {
+    content: "📅 APPOINTMENTS";
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #27ae60;
+}
+
+
+.dashboard li:nth-child(2)::before,
+.dashboard li:nth-child(4)::before,
+.dashboard li:nth-child(6)::before {
+    display: none;
+}
+
+
+.dashboard li:nth-child(1) .card { background-color: #3498db; }  
+.dashboard li:nth-child(2) .card { background-color: #2980b9; } 
+.dashboard li:nth-child(3) .card { background-color: #e67e22; }  
+.dashboard li:nth-child(4) .card { background-color: #d35400; } 
+.dashboard li:nth-child(5) .card { background-color: #27ae60; }  
+.dashboard li:nth-child(6) .card { background-color: #229954; } 
+
+
+.dashboard li:nth-child(1) .card::before { content: "➕ "; }
+.dashboard li:nth-child(2) .card::before { content: "👁️ "; }
+.dashboard li:nth-child(3) .card::before { content: "➕ "; }
+.dashboard li:nth-child(4) .card::before { content: "👁️ "; }
+.dashboard li:nth-child(5) .card::before { content: "➕ "; }
+.dashboard li:nth-child(6) .card::before { content: "👁️ "; }
+
+
+.dashboard li:nth-child(1) .card::after { content: "Register new patient"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+.dashboard li:nth-child(2) .card::after { content: "View all patients"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+.dashboard li:nth-child(3) .card::after { content: "Register new doctor"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+.dashboard li:nth-child(4) .card::after { content: "View all doctors"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+.dashboard li:nth-child(5) .card::after { content: "Book appointment"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+.dashboard li:nth-child(6) .card::after { content: "View appointments"; display: block; font-size: 12px; margin-top: 8px; opacity: 0.9; font-weight: normal; }
+
+
+.dashboard li:first-child:nth-last-child(3),
+.dashboard li:first-child:nth-last-child(3) ~ li {
+    width: 280px;              
+    max-width: 280px;
+    min-width: 280px;
+    margin: 0 auto;
+}
+
+
+.dashboard li:first-child:nth-last-child(3)::before {
+    content: "👨‍⚕️ DOCTOR DASHBOARD";
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+}
+
+
+.dashboard li:first-child:nth-last-child(3) ~ li::before {
+    display: none;
+}
+
+
+.dashboard:has(li:first-child:nth-last-child(3)) ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.dashboard li:first-child:nth-last-child(3),
+.dashboard li:first-child:nth-last-child(3) ~ li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.dashboard li:first-child:nth-last-child(3) .card { 
+    background-color: #3498db;      
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(2) .card { 
+    background-color: #e67e22;     
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(3) .card { 
+    background-color: #27ae60;    
+}
+
+
+.dashboard li:first-child:nth-last-child(3) .card::before { 
+    content: "👁️ "; 
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(2) .card::before { 
+    content: "👁️ "; 
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(3) .card::before { 
+    content: "👁️ "; 
+}
+
+
+.dashboard li:first-child:nth-last-child(3) .card::after { 
+    content: "View all patients"; 
+    display: block; 
+    font-size: 12px; 
+    margin-top: 8px; 
+    opacity: 0.9; 
+    font-weight: normal; 
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(2) .card::after { 
+    content: "View all doctors"; 
+    display: block; 
+    font-size: 12px; 
+    margin-top: 8px; 
+    opacity: 0.9; 
+    font-weight: normal; 
+}
+.dashboard li:first-child:nth-last-child(3) ~ li:nth-child(3) .card::after { 
+    content: "View appointments"; 
+    display: block; 
+    font-size: 12px; 
+    margin-top: 8px; 
+    opacity: 0.9; 
+    font-weight: normal; 
+}
+
+
 .form-box {
     width: 420px;
     margin: 60px auto;
@@ -118,14 +274,12 @@ body {
     color: #2c3e50;
 }
 
-/* Labels */
 .form-box label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
-/* Inputs */
 .form-box input {
     width: 100%;
     padding: 8px;
@@ -134,7 +288,6 @@ body {
     border-radius: 4px;
 }
 
-/* Buttons */
 .form-box button {
     width: 100%;
     margin-top: 15px;
@@ -150,9 +303,7 @@ body {
     background-color: #2980b9;
 }
 
-/* ===============================
-   TABLE (VIEW PAGES)
-================================ */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -175,9 +326,7 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* ===============================
-   LINKS & BUTTONS
-================================ */
+
 .back-link,
 .back-btn {
     display: inline-block;
@@ -192,9 +341,7 @@ table tr:nth-child(even) {
     text-decoration: underline;
 }
 
-/* ===============================
-   SUCCESS PAGE
-================================ */
+
 .success-box {
     width: 420px;
     margin: 80px auto;
@@ -209,31 +356,36 @@ table tr:nth-child(even) {
     color: #27ae60;
 }
 
-/* ===============================
-   ERROR MESSAGE
-================================ */
+
 .error-msg {
     color: red;
     text-align: center;
     margin-top: 10px;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+
 @media (max-width: 768px) {
-
-    .dashboard ul {
-        justify-content: center;
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
-
+    
+    .dashboard li {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .card {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
     }
-
+    
     .form-box {
         width: 90%;
     }
+    
+    .welcome {
+        margin: 15px 20px;
+    }
 }
-
